@@ -5,7 +5,7 @@ const handlebars  = require('express-handlebars');
 const app = express()
 const port = 3000
 // phut 24
-const route = require('./routes')
+const route = require('./routes/index.js')
 
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({
@@ -14,30 +14,17 @@ app.use(express.urlencoded({
 app.use(express.json())
 // app.use(morgan('combined'))
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
 
-// app.get('/news', (req, res) => {
-//   res.render('news')
-// })
-
-
-app.get('/search', (req, res) => {
-  res.render('search')
-})
-
-app.post('/search', (req, res) => {
-
-  console.log(req.body)
-
-  res.send('')
-})
 
 
 app.set('views', path.join(__dirname, 'resources/views'));
 
+
+// route init khởi tạo tuyến đường
+route(app)
+
 app.engine('.hbs', handlebars({extname: '.hbs'}));
+
 
 
 app.set('view engine', 'hbs');

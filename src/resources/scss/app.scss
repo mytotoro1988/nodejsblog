@@ -3,3 +3,10 @@ h1 {
   color: $red-color;
   background-color: blue;
 }
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  right: 4px;
+}

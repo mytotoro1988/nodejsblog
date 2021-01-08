@@ -24,7 +24,15 @@ app.set('views', path.join(__dirname, 'resources', 'views'));
 // route init khởi tạo tuyến đường
 route(app);
 
-app.engine('.hbs', handlebars({ extname: '.hbs' }));
+app.engine(
+  'hbs',
+  handlebars({
+    extname: '.hbs',
+    helpers: {
+      sum: (a, b) => a + b,
+    },
+  }),
+);
 
 app.set('view engine', 'hbs');
 

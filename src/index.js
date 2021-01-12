@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 const route = require('./routes/index.js');
 const db = require('./config/db');
+const methodOverride = require('method-override');
 
 // connect db
 db.connect();
@@ -17,6 +18,9 @@ app.use(
   }),
 );
 app.use(express.json());
+
+app.use(methodOverride('_method'));
+
 // app.use(morgan('combined'))
 
 app.set('views', path.join(__dirname, 'resources', 'views'));

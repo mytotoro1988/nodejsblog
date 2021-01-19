@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mytotoro1988/nodejsblog.git"
+    "url": "git+https://github.com/mytotoro1988/Nodejscopy.git"
   },
   "keywords": [
     "f8",
@@ -22,9 +22,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mytotoro1988/nodejsblog/issues"
+    "url": "https://github.com/mytotoro1988/Nodejscopy/issues"
   },
-  "homepage": "https://github.com/mytotoro1988/nodejsblog#readme",
+  "homepage": "https://github.com/mytotoro1988/Nodejscopy#readme",
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-with 4 --write"
   },
